@@ -1,20 +1,20 @@
 import React from "react";
 interface IProps extends React.InputHTMLAttributes<HTMLInputElement> {
-  lableText?: string;
+  labelText?: string;
   error?: string;
   children?: React.ReactNode;
 }
 
 const TextBox = React.forwardRef<HTMLInputElement, IProps>(
-  ({ className, children, lableText, type = "text", error, ...props }, ref) => {
+  ({ className, children, labelText, type = "text", error, ...props }, ref) => {
     return (
       <div className={className + " relative"}>
-        {lableText && (
+        {labelText && (
           <label
             className="block text-gray-600  mb-2 text-xs lg:text-sm xl:text-base"
             htmlFor="txt"
           >
-            {lableText}
+            {labelText}
           </label>
         )}
         <div className="flex items-stretch">
@@ -37,7 +37,7 @@ const TextBox = React.forwardRef<HTMLInputElement, IProps>(
         )}
       </div>
     );
-  },
+  }
 );
 
 TextBox.displayName = "TextBox";

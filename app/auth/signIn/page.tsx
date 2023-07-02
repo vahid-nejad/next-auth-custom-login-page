@@ -23,9 +23,12 @@ const LoginPage = () => {
       }
     >
       <div className="px-7 py-4 shadow bg-white rounded-md flex flex-col gap-2">
-        <TextBox lableText="User Name" onChange={(e) => (userName.current = e.target.value)} />
         <TextBox
-          lableText="Password"
+          labelText="User Name"
+          onChange={(e) => (userName.current = e.target.value)}
+        />
+        <TextBox
+          labelText="Password"
           type={"password"}
           onChange={(e) => (pass.current = e.target.value)}
         />
